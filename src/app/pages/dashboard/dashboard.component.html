@@ -1,1 +1,7 @@
-<p>dashboard works!</p>
+<main *ngIf="validToken">
+  <h1>{{userData && userData.nombres && userData.nombres}}</h1>
+  <h2>Rol: {{userData && userData.rol && userData.rol}}</h2>
+  <button (click)="closeSession()">Cerrar sesión</button>
+</main>
+
+<spinner [show]="showSpinner" [message]="spinnerMessage"></spinner>
