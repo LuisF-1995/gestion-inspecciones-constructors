@@ -16,6 +16,7 @@ import { gestionInspeccionesUrl } from '../../../constants/Api';
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent implements OnInit {
+  constructor(private dashBoardService:DashboardService, private router:Router){}
 
   validToken:boolean = false;
   userData:{
@@ -35,7 +36,6 @@ export class DashboardComponent implements OnInit {
   showSpinner:boolean = false;
   spinnerMessage:string = "";
 
-  constructor(private dashBoardService:DashboardService, private router:Router){}
 
   ngOnInit(): void {
     this.showSpinner = true;
